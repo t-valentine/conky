@@ -4,7 +4,7 @@ with open('/home/shared/OMSCS/2_AutomatedNotes/conky.md', 'r') as file:
 # split data & get only the tasks
 fileContents = data.split("%%")
 taskArray = fileContents[2].split("- [ ] ")
-clippedArray = taskArray[1:4] #excluding first blank item, only get 3 most recent To Dos
+clippedArray = taskArray[1:5] #excluding first blank item, only get 4 most recent To Dos
 for task in clippedArray:
     onlyTask = task.split("📅")[0] # due dates are after a calendar emoji
     # over 40 characters will clip conky window, so if it's over 40 they get shortened w/ellipses
